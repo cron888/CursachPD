@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: CursachPD
+  profiles:
+    active: dev
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+server:
+  port: 8080
+
+telegram:
+  bot:
+    token: ${TELEGRAM_BOT_TOKEN:your-bot-token-here}
+    username: ${TELEGRAM_BOT_USERNAME:cursachpd_bot}
+
+app:
+  cache:
+    expire-minutes: 30
